@@ -1,0 +1,23 @@
+<xs:element name="EncryptionDetails">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="DirectoryProcess">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Algorithm" type="xs:string"/>
+            <xs:element name="SourceDirectory" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FileProcess">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Algorithm" type="xs:string"/>
+            <xs:element name="SourceFile" type="xs:string"/>
+            <xs:element name="DestinationFile" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>

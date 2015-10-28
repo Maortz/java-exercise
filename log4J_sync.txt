@@ -1,0 +1,12 @@
+6478 [main] INFO EncryptionLog4JLogger  - Dir Enc. Started. /home/maor/Sync_docs -> /home/maor/Sync_docs/encrypted, ShiftUpEncryption@388cc09a
+6478 [main] INFO EncryptionLog4JLogger  - Enc. Started. /home/maor/Sync_docs/file0.txt -> /home/maor/Sync_docs/encrypted/file0.txt, ShiftUpEncryption@388cc09a
+9256 [main] INFO EncryptionLog4JLogger  - Enc. Ended. Took 2778ms. /home/maor/Sync_docs/file0.txt -> /home/maor/Sync_docs/encrypted/file0.txt, ShiftUpEncryption@388cc09a
+9257 [main] INFO EncryptionLog4JLogger  - Dir Enc. Ended. Took 2779ms. /home/maor/Sync_docs -> /home/maor/Sync_docs/encrypted, ShiftUpEncryption@388cc09a
+0 [main] INFO EncryptionLog4JLogger  - Dir Enc. Started. /home/maor/Sync_docs -> /home/maor/Sync_docs/encrypted, ShiftUpEncryption@2c798781
+5 [main] INFO EncryptionLog4JLogger  - Enc. Started. /home/maor/Sync_docs/file0.txt -> /home/maor/Sync_docs/encrypted/file0.txt, ShiftUpEncryption@2c798781
+56298 [main] INFO EncryptionLog4JLogger  - Enc. Ended. Took 56293ms. /home/maor/Sync_docs/file0.txt -> /home/maor/Sync_docs/encrypted/file0.txt, ShiftUpEncryption@2c798781
+56298 [main] INFO EncryptionLog4JLogger  - Dir Enc. Ended. Took 56299ms. /home/maor/Sync_docs -> /home/maor/Sync_docs/encrypted, ShiftUpEncryption@2c798781
+0 [main] INFO EncryptionLog4JLogger  - Dir Enc. Started. /home/maor/Sync_docs -> /home/maor/Sync_docs/encrypted, ShiftUpEncryption@277f4790
+6 [main] INFO EncryptionLog4JLogger  - Enc. Started. /home/maor/Sync_docs/file0.txt -> /home/maor/Sync_docs/encrypted/file0.txt, ShiftUpEncryption@277f4790
+128 [main] INFO EncryptionLog4JLogger  - Enc. Ended. Took 122ms. /home/maor/Sync_docs/file0.txt -> /home/maor/Sync_docs/encrypted/file0.txt, ShiftUpEncryption@277f4790
+128 [main] INFO EncryptionLog4JLogger  - Dir Enc. Ended. Took 129ms. /home/maor/Sync_docs -> /home/maor/Sync_docs/encrypted, ShiftUpEncryption@277f4790

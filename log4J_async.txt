@@ -1,0 +1,31 @@
+0 [main] INFO EncryptionLog4JLogger  - Dir Enc. Started. /home/maor/Async_docs -> /home/maor/Async_docs/encrypted, ShiftUpEncryption@5eaf3cf6
+7 [Thread-1] INFO EncryptionLog4JLogger  - Enc. Started. /home/maor/Async_docs/file0.txt -> /home/maor/Async_docs/encrypted/file0.txt, ShiftUpEncryption@5eaf3cf6
+3266 [Thread-1] INFO EncryptionLog4JLogger  - Enc. Started. /home/maor/Async_docs/file0.txt -> /home/maor/Async_docs/encrypted/file0.txt, ShiftUpEncryption@5eaf3cf6
+3281 [Thread-1] INFO EncryptionLog4JLogger  - Enc. Ended. Took 3274ms. /home/maor/Async_docs/file0.txt -> /home/maor/Async_docs/encrypted/file0.txt, ShiftUpEncryption@5eaf3cf6
+3281 [main] INFO EncryptionLog4JLogger  - Dir Enc. Ended. Took 3282ms. /home/maor/Async_docs -> /home/maor/Async_docs/encrypted, ShiftUpEncryption@5eaf3cf6
+3282 [main] INFO EncryptionLog4JLogger  - Dir Dec. Started. /home/maor/Async_docs/encrypted -> /home/maor/Async_docs/encrypted/decrypted, ShiftUpEncryption@5eaf3cf6
+3285 [Thread-3] INFO EncryptionLog4JLogger  - Dec. Started. /home/maor/Async_docs/encrypted/file0.txt -> /home/maor/Async_docs/encrypted/decrypted/file0.txt, ShiftUpEncryption@5eaf3cf6
+6475 [Thread-3] INFO EncryptionLog4JLogger  - Dec. Ended. Took 3190ms. /home/maor/Async_docs/encrypted/file0.txt -> /home/maor/Async_docs/encrypted/decrypted/file0.txt, ShiftUpEncryption@5eaf3cf6
+6475 [main] INFO EncryptionLog4JLogger  - Dir Dec. Ended. Took 3194ms. /home/maor/Async_docs/encrypted -> /home/maor/Async_docs/encrypted/decrypted, ShiftUpEncryption@5eaf3cf6
+6478 [main] INFO EncryptionLog4JLogger  - Dir Enc. Started. /home/maor/Sync_docs -> /home/maor/Sync_docs/encrypted, ShiftUpEncryption@388cc09a
+6478 [main] INFO EncryptionLog4JLogger  - Enc. Started. /home/maor/Sync_docs/file0.txt -> /home/maor/Sync_docs/encrypted/file0.txt, ShiftUpEncryption@388cc09a
+9256 [main] INFO EncryptionLog4JLogger  - Enc. Ended. Took 2778ms. /home/maor/Sync_docs/file0.txt -> /home/maor/Sync_docs/encrypted/file0.txt, ShiftUpEncryption@388cc09a
+9257 [main] INFO EncryptionLog4JLogger  - Dir Enc. Ended. Took 2779ms. /home/maor/Sync_docs -> /home/maor/Sync_docs/encrypted, ShiftUpEncryption@388cc09a
+0 [main] INFO EncryptionLog4JLogger  - Dir Enc. Started. /home/maor/Async_docs -> /home/maor/Async_docs/encrypted, ShiftUpEncryption@2c798781
+6 [Thread-1] INFO EncryptionLog4JLogger  - Enc. Started. /home/maor/Async_docs/file0.txt -> /home/maor/Async_docs/encrypted/file0.txt, ShiftUpEncryption@2c798781
+13993 [Thread-1] INFO EncryptionLog4JLogger  - Enc. Started. /home/maor/Async_docs/file0.txt -> /home/maor/Async_docs/encrypted/file0.txt, ShiftUpEncryption@2c798781
+14008 [Thread-1] INFO EncryptionLog4JLogger  - Enc. Ended. Took 14002ms. /home/maor/Async_docs/file0.txt -> /home/maor/Async_docs/encrypted/file0.txt, ShiftUpEncryption@2c798781
+14008 [main] INFO EncryptionLog4JLogger  - Dir Enc. Ended. Took 14009ms. /home/maor/Async_docs -> /home/maor/Async_docs/encrypted, ShiftUpEncryption@2c798781
+14009 [main] INFO EncryptionLog4JLogger  - Dir Dec. Started. /home/maor/Async_docs/encrypted -> /home/maor/Async_docs/encrypted/decrypted, ShiftUpEncryption@2c798781
+14015 [Thread-3] INFO EncryptionLog4JLogger  - Dec. Started. /home/maor/Async_docs/encrypted/file0.txt -> /home/maor/Async_docs/encrypted/decrypted/file0.txt, ShiftUpEncryption@2c798781
+27813 [Thread-3] INFO EncryptionLog4JLogger  - Dec. Ended. Took 13798ms. /home/maor/Async_docs/encrypted/file0.txt -> /home/maor/Async_docs/encrypted/decrypted/file0.txt, ShiftUpEncryption@2c798781
+27813 [main] INFO EncryptionLog4JLogger  - Dir Dec. Ended. Took 13804ms. /home/maor/Async_docs/encrypted -> /home/maor/Async_docs/encrypted/decrypted, ShiftUpEncryption@2c798781
+0 [main] INFO EncryptionLog4JLogger  - Dir Enc. Started. /home/maor/Async_docs -> /home/maor/Async_docs/encrypted, ShiftUpEncryption@5eaf3cf6
+6 [Thread-1] INFO EncryptionLog4JLogger  - Enc. Started. /home/maor/Async_docs/file0.txt -> /home/maor/Async_docs/encrypted/file0.txt, ShiftUpEncryption@5eaf3cf6
+58985 [Thread-1] INFO EncryptionLog4JLogger  - Enc. Started. /home/maor/Async_docs/file0.txt -> /home/maor/Async_docs/encrypted/file0.txt, ShiftUpEncryption@5eaf3cf6
+59005 [Thread-1] INFO EncryptionLog4JLogger  - Enc. Ended. Took 58999ms. /home/maor/Async_docs/file0.txt -> /home/maor/Async_docs/encrypted/file0.txt, ShiftUpEncryption@5eaf3cf6
+59005 [main] INFO EncryptionLog4JLogger  - Dir Enc. Ended. Took 59007ms. /home/maor/Async_docs -> /home/maor/Async_docs/encrypted, ShiftUpEncryption@5eaf3cf6
+59005 [main] INFO EncryptionLog4JLogger  - Dir Dec. Started. /home/maor/Async_docs/encrypted -> /home/maor/Async_docs/encrypted/decrypted, ShiftUpEncryption@5eaf3cf6
+59006 [Thread-3] INFO EncryptionLog4JLogger  - Dec. Started. /home/maor/Async_docs/encrypted/file0.txt -> /home/maor/Async_docs/encrypted/decrypted/file0.txt, ShiftUpEncryption@5eaf3cf6
+131495 [Thread-3] INFO EncryptionLog4JLogger  - Dec. Ended. Took 72489ms. /home/maor/Async_docs/encrypted/file0.txt -> /home/maor/Async_docs/encrypted/decrypted/file0.txt, ShiftUpEncryption@5eaf3cf6
+131496 [main] INFO EncryptionLog4JLogger  - Dir Dec. Ended. Took 72491ms. /home/maor/Async_docs/encrypted -> /home/maor/Async_docs/encrypted/decrypted, ShiftUpEncryption@5eaf3cf6

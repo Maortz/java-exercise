@@ -1,0 +1,29 @@
+
+0 [main] INFO EncryptionLog4JLogger  - Dir Enc. Started. /home/maor/docs -> /home/maor/docs/encrypted, ShiftUpEncryption@447cfb2
+19 [Thread-1] INFO EncryptionLog4JLogger  - Enc. Started. /home/maor/docs/doc (5th copy).txt -> /home/maor/docs/encrypted/doc (5th copy).txt, ShiftUpEncryption@447cfb2
+22 [Thread-2] INFO EncryptionLog4JLogger  - Enc. Started. /home/maor/docs/doc (6th copy).txt -> /home/maor/docs/encrypted/doc (6th copy).txt, ShiftUpEncryption@447cfb2
+29 [Thread-3] INFO EncryptionLog4JLogger  - Enc. Started. /home/maor/docs/doc (another copy).txt -> /home/maor/docs/encrypted/doc (another copy).txt, ShiftUpEncryption@447cfb2
+32 [Thread-4] INFO EncryptionLog4JLogger  - Enc. Started. /home/maor/docs/doc (copy).txt -> /home/maor/docs/encrypted/doc (copy).txt, ShiftUpEncryption@447cfb2
+33 [Thread-5] INFO EncryptionLog4JLogger  - Enc. Started. /home/maor/docs/doc.txt -> /home/maor/docs/encrypted/doc.txt, ShiftUpEncryption@447cfb2
+41 [Thread-6] INFO EncryptionLog4JLogger  - Enc. Started. /home/maor/docs/doc (3rd copy).txt -> /home/maor/docs/encrypted/doc (3rd copy).txt, ShiftUpEncryption@447cfb2
+54 [Thread-4] INFO EncryptionLog4JLogger  - Enc. Ended. Took 22ms. /home/maor/docs/doc (copy).txt -> /home/maor/docs/encrypted/doc (copy).txt, ShiftUpEncryption@447cfb2
+58 [Thread-2] INFO EncryptionLog4JLogger  - Enc. Ended. Took 39ms. /home/maor/docs/doc (6th copy).txt -> /home/maor/docs/encrypted/doc (6th copy).txt, ShiftUpEncryption@447cfb2
+59 [Thread-5] INFO EncryptionLog4JLogger  - Enc. Ended. Took 25ms. /home/maor/docs/doc.txt -> /home/maor/docs/encrypted/doc.txt, ShiftUpEncryption@447cfb2
+66 [Thread-3] INFO EncryptionLog4JLogger  - Enc. Ended. Took 37ms. /home/maor/docs/doc (another copy).txt -> /home/maor/docs/encrypted/doc (another copy).txt, ShiftUpEncryption@447cfb2
+66 [Thread-6] INFO EncryptionLog4JLogger  - Enc. Ended. Took 25ms. /home/maor/docs/doc (3rd copy).txt -> /home/maor/docs/encrypted/doc (3rd copy).txt, ShiftUpEncryption@447cfb2
+66 [Thread-1] INFO EncryptionLog4JLogger  - Enc. Ended. Took 47ms. /home/maor/docs/doc (5th copy).txt -> /home/maor/docs/encrypted/doc (5th copy).txt, ShiftUpEncryption@447cfb2
+131 [main] INFO EncryptionLog4JLogger  - Dir Enc. Ended. Took 133ms. /home/maor/docs -> /home/maor/docs/encrypted, ShiftUpEncryption@447cfb2
+132 [main] INFO EncryptionLog4JLogger  - Dir Dec. Started. /home/maor/docs/encrypted -> /home/maor/docs/encrypted/decrypted, ShiftUpEncryption@447cfb2
+134 [Thread-7] INFO EncryptionLog4JLogger  - Dec. Started. /home/maor/docs/encrypted/doc (5th copy).txt -> /home/maor/docs/encrypted/decrypted/doc (5th copy).txt, ShiftUpEncryption@447cfb2
+135 [Thread-7] INFO EncryptionLog4JLogger  - Dec. Ended. Took 1ms. /home/maor/docs/encrypted/doc (5th copy).txt -> /home/maor/docs/encrypted/decrypted/doc (5th copy).txt, ShiftUpEncryption@447cfb2
+136 [Thread-8] INFO EncryptionLog4JLogger  - Dec. Started. /home/maor/docs/encrypted/doc (6th copy).txt -> /home/maor/docs/encrypted/decrypted/doc (6th copy).txt, ShiftUpEncryption@447cfb2
+138 [Thread-8] INFO EncryptionLog4JLogger  - Dec. Ended. Took 1ms. /home/maor/docs/encrypted/doc (6th copy).txt -> /home/maor/docs/encrypted/decrypted/doc (6th copy).txt, ShiftUpEncryption@447cfb2
+143 [Thread-9] INFO EncryptionLog4JLogger  - Dec. Started. /home/maor/docs/encrypted/doc (another copy).txt -> /home/maor/docs/encrypted/decrypted/doc (another copy).txt, ShiftUpEncryption@447cfb2
+144 [Thread-9] INFO EncryptionLog4JLogger  - Dec. Ended. Took 1ms. /home/maor/docs/encrypted/doc (another copy).txt -> /home/maor/docs/encrypted/decrypted/doc (another copy).txt, ShiftUpEncryption@447cfb2
+145 [Thread-10] INFO EncryptionLog4JLogger  - Dec. Started. /home/maor/docs/encrypted/doc (copy).txt -> /home/maor/docs/encrypted/decrypted/doc (copy).txt, ShiftUpEncryption@447cfb2
+145 [Thread-10] INFO EncryptionLog4JLogger  - Dec. Ended. Took 1ms. /home/maor/docs/encrypted/doc (copy).txt -> /home/maor/docs/encrypted/decrypted/doc (copy).txt, ShiftUpEncryption@447cfb2
+154 [Thread-11] INFO EncryptionLog4JLogger  - Dec. Started. /home/maor/docs/encrypted/doc.txt -> /home/maor/docs/encrypted/decrypted/doc.txt, ShiftUpEncryption@447cfb2
+155 [Thread-11] INFO EncryptionLog4JLogger  - Dec. Ended. Took 1ms. /home/maor/docs/encrypted/doc.txt -> /home/maor/docs/encrypted/decrypted/doc.txt, ShiftUpEncryption@447cfb2
+157 [Thread-12] INFO EncryptionLog4JLogger  - Dec. Started. /home/maor/docs/encrypted/doc (3rd copy).txt -> /home/maor/docs/encrypted/decrypted/doc (3rd copy).txt, ShiftUpEncryption@447cfb2
+158 [Thread-12] INFO EncryptionLog4JLogger  - Dec. Ended. Took 1ms. /home/maor/docs/encrypted/doc (3rd copy).txt -> /home/maor/docs/encrypted/decrypted/doc (3rd copy).txt, ShiftUpEncryption@447cfb2
+158 [main] INFO EncryptionLog4JLogger  - Dir Dec. Ended. Took 26ms. /home/maor/docs/encrypted -> /home/maor/docs/encrypted/decrypted, ShiftUpEncryption@447cfb2

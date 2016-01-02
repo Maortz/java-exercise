@@ -4,13 +4,13 @@ public interface IDirectoryProcessor<E> {
 
     ArrayList<String> getTxtFiles(String directory);
 
-    void encrtptDirectory(String directory) throws Exception;
+    void encryptDirectory(String directory) throws Exception;
 
-    ArrayList<String> prepereEncryption(String directory) throws Exception;
+    ArrayList<String> prepareEncryption(String directory) throws Exception;
 
     void decryptDirectory(String directory) throws Exception;
 
-    ArrayList<String> prepereDecryption(String directory) throws Exception;
+    ArrayList<String> prepareDecryption(String directory) throws Exception;
 
     void createDirectory(String directory, int c) throws Exception;
 

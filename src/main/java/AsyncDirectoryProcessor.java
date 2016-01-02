@@ -46,8 +46,8 @@ public class AsyncDirectoryProcessor<E> extends Thread implements
             String[] parts = efile.split("(?<=\\G.{1000})");
             SplitAsyncEncryption t;
             ArrayList<SplitAsyncEncryption> threads = new ArrayList<SplitAsyncEncryption>();
-            for (int i = 0; i < parts.length; i++) {
-                t = new SplitAsyncEncryption(parts[i]);
+            for (String part : parts) {
+                t = new SplitAsyncEncryption(part);
                 t.start();
                 threads.add(t);
             }
@@ -95,15 +95,15 @@ public class AsyncDirectoryProcessor<E> extends Thread implements
         this.encryptionAlgorithm = encryptionAlgorithm1;
     }
 
-    public void encrtptDirectory(String directory) throws Exception {
-        ArrayList<String> files = prepereEncryption(directory);
+    public void encryptDirectory(String directory) throws Exception {
+        ArrayList<String> files = prepareEncryption(directory);
         ArrayList<Thread> threads = new ArrayList<Thread>();
         Thread t;
         ev_wholeEncryptionStarted(new EncryptionLogEventArgs(directory,
                 directory + String.valueOf(File.separatorChar) + "encrypted",
                 encryptionAlgorithm, System.currentTimeMillis()));
-        for (int i = 0; i < files.size(); i++) {
-            t = new Thread(new AsyncEncryption(files.get(i)));
+        for (String file : files) {
+            t = new Thread(new AsyncEncryption(file));
             t.start();
             threads.add(t);
         }
@@ -118,14 +118,14 @@ public class AsyncDirectoryProcessor<E> extends Thread implements
     }
 
     public void decryptDirectory(String directory) throws Exception {
-        ArrayList<String> files = prepereDecryption(directory);
+        ArrayList<String> files = prepareDecryption(directory);
         ArrayList<Thread> threads = new ArrayList<Thread>();
         Thread t;
         ev_wholeDecryptionStarted(new EncryptionLogEventArgs(directory,
                 directory + String.valueOf(File.separatorChar) + "decrypted",
                 encryptionAlgorithm, System.currentTimeMillis()));
-        for (int i = 0; i < files.size(); i++) {
-            t = new Thread(new AsyncDecryption(files.get(i)));
+        for (String file : files) {
+            t = new Thread(new AsyncDecryption(file));
             t.start();
             threads.add(t);
         }
@@ -183,17 +183,16 @@ public class AsyncDirectoryProcessor<E> extends Thread implements
             throw new Exception("Cannot create directory");
     }
 
-    public ArrayList<String> prepereEncryption(String directory)
+    public ArrayList<String> prepareEncryption(String directory)
             throws Exception {
         createDirectory(directory, 0);
         encryptionAlgorithm.genKey(3);
         encryptionAlgorithm.saveKey(directory
                 + String.valueOf(File.separatorChar) + "encrypted");
-        ArrayList<String> files = getTxtFiles(directory);
-        return files;
+        return getTxtFiles(directory);
     }
 
-    public ArrayList<String> prepereDecryption(String directory)
+    public ArrayList<String> prepareDecryption(String directory)
             throws Exception {
         createDirectory(directory, 1);
         ArrayList<String> files = getTxtFiles(directory);

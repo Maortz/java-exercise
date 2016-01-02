@@ -1,29 +1,8 @@
-<EncryptionDetails>
-	<DirectoryProcess>
-		<Algorithm>
-			ShiftUpEncryption
-		</Algorithm>
-		<SourceDirectory>
-			/home/maor/Sync_docs
-		</SourceDirectory>
-	</DirectoryProcess>
-	<DirectoryProcess>
-		<Algorithm>
-			RepeatEncryption3,ShiftUpEncryption
-		</Algorithm>
-		<SourceDirectory>
-			/home/maor/Sync_docs
-		</SourceDirectory>
-	</DirectoryProcess>
-	<FileProcess>
-		<Algorithm>
-			DoubleEncryption,ShiftUpEncryption
-		</Algorithm>
-		<SourceFile>
-			/home/maor/doc.txt
-		</SourceFile>
-		<DestinationFile>
-			/home/maor/doc_decryption.txt
-		</DestinationFile>
-	</FileProcess>
-</EncryptionDetails>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<encryptionParamList>
+    <encryptionDetails isDirectory="false">
+        <destPath>there</destPath>
+        <encryptionAlgorithm>ShiftUpEncryption</encryptionAlgorithm>
+        <sourcePath>here</sourcePath>
+    </encryptionDetails>
+</encryptionParamList>

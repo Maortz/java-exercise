@@ -56,17 +56,16 @@ public abstract class DirectoryProcessor<E> implements IDirectoryProcessor<E> {
             throw new Exception("Cannot create directory");
     }
 
-    public ArrayList<String> prepereEncryption(String directory)
+    public ArrayList<String> prepareEncryption(String directory)
             throws Exception {
         createDirectory(directory, 0);
         encryptionAlgorithm.genKey(3);
         encryptionAlgorithm.saveKey(directory
                 + String.valueOf(File.separatorChar) + "encrypted");
-        ArrayList<String> files = getTxtFiles(directory);
-        return files;
+        return getTxtFiles(directory);
     }
 
-    public ArrayList<String> prepereDecryption(String directory)
+    public ArrayList<String> prepareDecryption(String directory)
             throws Exception {
         createDirectory(directory, 1);
         ArrayList<String> files = getTxtFiles(directory);

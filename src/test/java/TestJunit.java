@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.nio.file.*;
 
 import org.junit.*;
-import static org.junit.Assert.*;
+import org.xml.sax.XMLReader;
+
+import javax.xml.bind.JAXBException;
 
 public class TestJunit {
     static String orgPath = "/home/maor/doc.txt";
@@ -77,7 +79,7 @@ public class TestJunit {
         EncryptionLog4JLogger<Integer> logger = new EncryptionLog4JLogger<Integer>(
                 adp, "log4J_async.txt");
         try {
-            adp.encrtptDirectory(encDirAsync);
+            adp.encryptDirectory(encDirAsync);
             adp.decryptDirectory(decDirAsync);
         } catch (Exception e) {
             // TODO Auto-generated catch block
@@ -85,7 +87,7 @@ public class TestJunit {
         }
     }
 
-    @Test
+    //@Test
     public void test4JLoggingWithSync() {
         SyncDirectoryProcessor<Integer> adp = new SyncDirectoryProcessor<Integer>(
                 new ShiftUpEncryption());
@@ -93,7 +95,7 @@ public class TestJunit {
         EncryptionLog4JLogger<Integer> logger = new EncryptionLog4JLogger<Integer>(
                 adp, "log4J_sync.txt");
         try {
-            adp.encrtptDirectory(encDirSync);
+            adp.encryptDirectory(encDirSync);
             adp.decryptDirectory(decDirSync);
         } catch (Exception e) {
             // TODO Auto-generated catch block
@@ -101,4 +103,14 @@ public class TestJunit {
         }
     }
 
+    @Test
+    public void testWriteXml() throws JAXBException, FileNotFoundException {
+        XMLParamsReader r = new JAXBReader();
+        r.readXML("EncryptionDetails.xml");
+        EncryptionDetails ed = r.getEncryptionParamList().getEncryptionDetails().get(0);
+        System.out.println(ed.getEncryptionAlgorithm());
+        System.out.println(ed.getSourcePath());
+        System.out.println(ed.getDestPath());
+
+    }
 }

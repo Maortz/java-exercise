@@ -1,4 +1,3 @@
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Stack;
 
@@ -8,9 +7,9 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class SAXHandler extends DefaultHandler {
 
-    private ArrayList<EncryptionParams> paramsList = new ArrayList<EncryptionParams>();
+    private ArrayList<EncryptionDetails> paramsList = new ArrayList<EncryptionDetails>();
 
-    public ArrayList<EncryptionParams> getParamsList() {
+    public ArrayList<EncryptionDetails> getParamsList() {
         return paramsList;
     }
 
@@ -22,9 +21,9 @@ public class SAXHandler extends DefaultHandler {
         // push element
         elementStack.push(qName);
         // push object
-        if ("DirectoryProcess".equals(qName) || "FileProcess".equals(qName)) {
-            EncryptionParams p = new EncryptionParams();
-            p.isDirectory = "DirectoryProcess".equals(qName);
+        if ("encryptionDetails".equals(qName)) {
+            EncryptionDetails p = new EncryptionDetails();
+            p.setIsDirectory("true".equals(attributes.getValue(0)));
             objectStack.push(p);
         }
     }
@@ -34,8 +33,8 @@ public class SAXHandler extends DefaultHandler {
 
         elementStack.pop();
 
-        if ("DirectoryProcess".equals(qName) || "FileProcess".equals(qName)) {
-            EncryptionParams p = (EncryptionParams) objectStack.pop();
+        if ("encryptionDetails".equals(qName)) {
+            EncryptionDetails p = (EncryptionDetails) objectStack.pop();
             paramsList.add(p);
         }
     }
@@ -49,17 +48,12 @@ public class SAXHandler extends DefaultHandler {
             return;
 
         // processing info.
-        if ("Algorithm".equals(currentElement())) {
-            try {
-                ((EncryptionParams) objectStack.peek()).encryptionAlgorithm = XMLHelper.getAlgorithmByName(value);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        } else if (("SourceDirectory".equals(currentElement()))
-                || ("SourceFile".equals(currentElement()))) {
-            ((EncryptionParams) objectStack.peek()).sourcePath = value;
-        } else if ("DestinationFile".equals(currentElement())) {
-            ((EncryptionParams) objectStack.peek()).destPath = value;
+        if ("encryptionAlgorithm".equals(currentElement())) {
+                ((EncryptionDetails) objectStack.peek()).setEncryptionAlgorithm(value);
+        } else if (("sourcePath".equals(currentElement()))) {
+            ((EncryptionDetails) objectStack.peek()).setSourcePath(value);
+        } else if ("destPath".equals(currentElement())) {
+            ((EncryptionDetails) objectStack.peek()).setDestPath(value);
 
         }
     }

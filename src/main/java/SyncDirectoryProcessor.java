@@ -8,8 +8,8 @@ public class SyncDirectoryProcessor<E> extends DirectoryProcessor<E> implements
         super(encryptionAlgorithm);
     }
 
-    public void encrtptDirectory(String directory) throws Exception {
-        ArrayList<String> files = prepereEncryption(directory);
+    public void encryptDirectory(String directory) throws Exception {
+        ArrayList<String> files = prepareEncryption(directory);
         ev_wholeEncryptionStarted(new EncryptionLogEventArgs(directory,
                 directory + String.valueOf(File.separatorChar) + "encrypted",
                 encryptionAlgorithm, System.currentTimeMillis()));
@@ -28,7 +28,7 @@ public class SyncDirectoryProcessor<E> extends DirectoryProcessor<E> implements
     }
 
     public void decryptDirectory(String directory) throws Exception {
-        ArrayList<String> files = prepereDecryption(directory);
+        ArrayList<String> files = prepareDecryption(directory);
         ev_wholeDecryptionStarted(new EncryptionLogEventArgs(directory,
                 directory + String.valueOf(File.separatorChar) + "decrypted",
                 encryptionAlgorithm, System.currentTimeMillis()));

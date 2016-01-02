@@ -7,7 +7,7 @@ import org.xml.sax.SAXException;
 
 public class DomReader implements XMLParamsReader {
 
-    ArrayList<EncryptionParams> paramList = new ArrayList<EncryptionParams>();
+    EncryptionParamList paramList = new EncryptionParamList();
 
     public void readXML(String path) {
         DocumentBuilderFactory builderFactory = DocumentBuilderFactory
@@ -30,9 +30,9 @@ public class DomReader implements XMLParamsReader {
         Element elem = document.getDocumentElement();
         NodeList nodes = elem.getChildNodes();
 
-        NodeList processes = null;
-        EncryptionParams param = null;
-        Boolean validElem = false;
+        NodeList processes;
+        EncryptionDetails param = null;
+        Boolean validElem;
 
         for (int i = 0; i < nodes.getLength(); i++) {
             Node node = nodes.item(i);
@@ -40,36 +40,27 @@ public class DomReader implements XMLParamsReader {
 
             if (node instanceof Element) {
                 Element child = (Element) node;
-                if ("DirectoryProcess".equals(child.getNodeName())) {
-                    param = new EncryptionParams();
-                    param.setIsDirectory(true);
-                    validElem = true;
-                } else if ("FileProcess".equals(child.getNodeName())) {
-                    param = new EncryptionParams();
-                    param.setIsDirectory(false);
+                if ("encryptionDetails".equals(child.getNodeName())) {
+                    param = new EncryptionDetails();
+                    param.setIsDirectory("true".equals(child.getAttribute("isDirectory")));
                     validElem = true;
                 }
                 if (validElem) {
                     processes = child.getChildNodes();
                     for (int j = 0; j < processes.getLength(); j++) {
                         try {
-                            if ("Algorithm".equals(processes.item(j)
+                            if ("encryptionAlgorithm".equals(processes.item(j)
                                     .getNodeName())) {
-                                param.setEncryptionAlgorithm(XMLHelper
-                                        .getAlgorithmByName(processes.item(j)
-                                                .getNodeValue()));
-                            } else if ("SourceDirectory".equals(processes.item(
+                                param.setEncryptionAlgorithm(processes.item(j)
+                                        .getFirstChild().getNodeValue());
+                            } else if ("sourcePath".equals(processes.item(
                                     j).getNodeName())) {
                                 param.setSourcePath(processes.item(j)
-                                        .getNodeValue());
-                            } else if ("SourceFile".equals(processes.item(j)
-                                    .getNodeName())) {
-                                param.setSourcePath(processes.item(j)
-                                        .getNodeValue());
-                            } else if ("DestinationFile".equals(processes.item(
+                                        .getFirstChild().getNodeValue());
+                            } else if ("destPath".equals(processes.item(
                                     j).getNodeName())) {
                                 param.setDestPath(processes.item(j)
-                                        .getNodeValue());
+                                        .getFirstChild().getNodeValue());
                             }
                         } catch (DOMException e) {
                             e.printStackTrace();
@@ -78,7 +69,7 @@ public class DomReader implements XMLParamsReader {
                         }
                     }
                     //
-                    paramList.add(param);
+                    paramList.getEncryptionDetails().add(param);
                 }
             }
 
@@ -86,7 +77,7 @@ public class DomReader implements XMLParamsReader {
 
     }
 
-    public ArrayList<EncryptionParams> getEncryptionParamList() {
+    public EncryptionParamList getEncryptionParamList() {
         return paramList;
     }
 
